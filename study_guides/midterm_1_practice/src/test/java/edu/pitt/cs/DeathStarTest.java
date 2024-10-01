@@ -20,8 +20,11 @@ public class DeathStarTest {
 	 */
 	@Test
 	public void testShootPlanetIntegration() {
-		// TODO: Fill in!
-		fail();
+		DeathStar star = new DeathStar();
+		Planet planet = new Planet(10);
+		String result = star.shoot(planet);
+		assertEquals("Wimpy planet was hit by the superlaser!", result);
+		assertEquals(-90,planet.getHitPoints());
 	}
 
 	/**
