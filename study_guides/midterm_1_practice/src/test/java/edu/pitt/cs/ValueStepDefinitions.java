@@ -12,7 +12,7 @@ public class ValueStepDefinitions {
 
 
 	@Given("a Value")
-		public void createValue()
+		public void aValue()
 		{
 			v = new Value();
 			
@@ -35,5 +35,6 @@ public class ValueStepDefinitions {
 	}
 	
 	// TODO: Fill in!
+
 }
 
