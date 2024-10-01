@@ -37,7 +37,14 @@ public class DeathStarTest {
 	 */
 	@Test
 	public void testShootPlanetUnit() {
-		// TODO: Fill in!
-		fail();
+		DeathStar star = new DeathStar();
+		Planet planet = Mockito.mock(Planet.class);
+		Mockito.when(planet.getHitPoints()).thenReturn(10);
+		Mockito.when(planet.toString()).thenReturn("Wimpy planet");
+		String result = star.shoot(planet);
+		assertEquals("Wimpy planet was hit by the superlaser!", result);
+		Mockito.verify(planet).damage(100);
+		
+
 	}
 }
